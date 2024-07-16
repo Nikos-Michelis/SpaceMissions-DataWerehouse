@@ -19,7 +19,7 @@ SELECT
             AND (date.year < 2024 OR (date.year = 2024 AND date.month < 6) OR (date.year = 2024 AND date.month = 6 AND date.day <= 7)) THEN 1 END) AS '21st_failed'
 FROM launch JOIN date ON launch.date_id = date.date_id;
 ```
-<h2>Result</h2>
+<h2>-</h2>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c948d3b7-403d-433a-849d-ff69e2fedd68" alt="Alt image">
 </p>
