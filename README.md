@@ -3,9 +3,7 @@
 
 ![space_missions_db_final](https://github.com/user-attachments/assets/06e97a03-5a92-41cc-802e-b13cc4035b79)
 
-## SQL Query Example
-
-Retrieve all failed missions from 1957 until June 7, 2024:
+<h2>Retrieve all failed missions from 1957 until June 7, 2024</h2>
 ```sql
 SELECT 
     COUNT(CASE WHEN date.year <= 2000 THEN 1 END) AS '20th_total', 
