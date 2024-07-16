@@ -19,7 +19,7 @@ SELECT
             AND (date.year < 2024 OR (date.year = 2024 AND date.month < 6) OR (date.year = 2024 AND date.month = 6 AND date.day <= 7)) THEN 1 END) AS '21st_failed'
 FROM launch JOIN date ON launch.date_id = date.date_id;
 ```
-<h2>-</h2>
+<h2 align="center">_______</h2>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c948d3b7-403d-433a-849d-ff69e2fedd68" alt="Alt image">
 </p>
@@ -38,7 +38,7 @@ FROM launch
 WHERE mission.mission_name LIKE 'Apollo%';
 ```
 <p align="center">
-  <img src="![image](https://github.com/user-attachments/assets/37a870f6-dbe2-4d01-b58e-b35921e30820)">
+  <img src="https://github.com/user-attachments/assets/37a870f6-dbe2-4d01-b58e-b35921e30820">
 </p>
 
 <h2>Retrieve the top five companies by their contributions.</h2>
@@ -53,7 +53,7 @@ ORDER BY Total_Missions DESC
 LIMIT 5;
 ```
 <p align="center">
-  <img src="![image](https://github.com/user-attachments/assets/d9a8ea4b-aaf2-47ef-8d48-9c12cde2a17c)">
+  <img src="https://github.com/user-attachments/assets/d9a8ea4b-aaf2-47ef-8d48-9c12cde2a17c">
 </p>
 
 <h2>Retrieve the total number of missions related to communications.</h2>
@@ -73,8 +73,9 @@ FROM launch
 WHERE mission.mission_type = 'Communications'
 GROUP BY '20th_century', '21th_century';
 ```
+
 <p align="center">
-  <img src="![image](https://github.com/user-attachments/assets/7c2b006c-1b77-4b5d-8e58-e70bd252170b)">
+  <img src="https://github.com/user-attachments/assets/7c2b006c-1b77-4b5d-8e58-e70bd252170b">
 </p>
 
 <h2>Return all Starlink missions in Low Earth Orbit along the other missions in this orbit.</h2>
@@ -93,7 +94,7 @@ WHERE mission.mission_type = 'Communications'
     AND orbit.orbit_name = "Low Earth Orbit";
 ```
 <p align="center">
-  <img src="![image](https://github.com/user-attachments/assets/684e558a-9f35-4d0b-a0f4-a65b40e97ed6)">
+  <img src="https://github.com/user-attachments/assets/684e558a-9f35-4d0b-a0f4-a65b40e97ed6">
 </p>
 
 
