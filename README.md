@@ -18,7 +18,6 @@ SELECT
 FROM launch JOIN date ON launch.date_id = date.date_id;
 ```
 
-![Alt image](https://github.com/user-attachments/assets/c948d3b7-403d-433a-849d-ff69e2fedd68)
-
-
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c948d3b7-403d-433a-849d-ff69e2fedd68" alt="Alt image">
+</p>
