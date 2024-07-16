@@ -5,7 +5,7 @@
 
 <h2>Retrieve all failed missions from 1957 until June 7, 2024</h2>
 
-```
+```sql
 SELECT 
     COUNT(CASE WHEN date.year <= 2000 THEN 1 END) AS '20th_total', 
     COUNT(CASE WHEN launch.launch_status = 'Failure' 
