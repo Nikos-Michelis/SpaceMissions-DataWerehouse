@@ -37,6 +37,7 @@ FROM launch
 	LEFT JOIN mission ON launch.mission_id = mission.mission_id
 WHERE mission.mission_name LIKE 'Apollo%';
 ```
+<h2 align="center">_______</h2>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/37a870f6-dbe2-4d01-b58e-b35921e30820">
 </p>
@@ -52,6 +53,7 @@ GROUP BY launch.provider_id
 ORDER BY Total_Missions DESC
 LIMIT 5;
 ```
+<h2 align="center">_______</h2>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d9a8ea4b-aaf2-47ef-8d48-9c12cde2a17c">
 </p>
@@ -73,7 +75,7 @@ FROM launch
 WHERE mission.mission_type = 'Communications'
 GROUP BY '20th_century', '21th_century';
 ```
-
+<h2 align="center">_______</h2>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7c2b006c-1b77-4b5d-8e58-e70bd252170b">
 </p>
@@ -93,6 +95,7 @@ WHERE mission.mission_type = 'Communications'
 	AND launch_provider.provider_name = 'SpaceX' 
     AND orbit.orbit_name = "Low Earth Orbit";
 ```
+<h2 align="center">_______</h2>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/684e558a-9f35-4d0b-a0f4-a65b40e97ed6">
 </p>
