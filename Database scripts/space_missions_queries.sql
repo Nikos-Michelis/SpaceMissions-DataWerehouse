@@ -53,7 +53,7 @@ FROM launch
 GROUP BY date.year
 ORDER BY date.year;
 
-/*Retrieve the five companies that have contributed the most*/
+/*Retrieve the top five companies by their contributions.*/
 SELECT launch_provider.provider_country_code, launch_provider.provider_name, provider_type , COUNT(launch.launch_id) as "Total_Missions" 
 FROM launch 
 	JOIN launch_provider ON launch.provider_id = launch_provider.provider_id
@@ -84,7 +84,7 @@ GROUP BY location.location_country_code
 ORDER BY Success desc
 LIMIT 5;
 
-/*Retrieve the total number of missions related to communications for the 20th century and the 21st century. */
+/*Retrieve the total number of missions related to communications. */
 SELECT
 	mission.mission_type,
     COUNT(CASE WHEN date.year <= 2000 THEN 1 END) AS '20th_century',
@@ -99,7 +99,7 @@ FROM launch
 WHERE mission.mission_type = 'Communications'
 GROUP BY '20th_century', '21th_century';
 
-/*Return all Starlink missions in Low Earth Orbit and the other missions in this orbit */
+/*Return all Starlink missions in Low Earth Orbit along the other missions in this orbit */
 SELECT
 	launch_provider.provider_name, mission.mission_type,
     COUNT(CASE WHEN  mission.mission_name LIKE('Starlink%') THEN 1 END) AS 'starlink_missions',
@@ -157,6 +157,3 @@ GROUP BY rocket.rocket_name, orbit.orbit_name
 HAVING total_orbit_count > 0
 ORDER BY total_orbit_count DESC
 LIMIT 20;
-
-    
-
