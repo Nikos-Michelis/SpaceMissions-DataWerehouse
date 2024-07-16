@@ -3,6 +3,8 @@
 
 ![space_missions_db_final](https://github.com/user-attachments/assets/06e97a03-5a92-41cc-802e-b13cc4035b79)
 
+<h1 align="center">- Queries -</h1>
+
 <h2>Retrieve all failed missions from 1957 until June 7, 2024</h2>
 
 ```sql
