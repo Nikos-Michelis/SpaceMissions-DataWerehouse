@@ -5,7 +5,7 @@
 
 <h2>Retrieve all failed missions from 1957 until June 7, 2024</h2>
 
-```sql
+```
 SELECT 
     COUNT(CASE WHEN date.year <= 2000 THEN 1 END) AS '20th_total', 
     COUNT(CASE WHEN launch.launch_status = 'Failure' 
@@ -15,7 +15,8 @@ SELECT
     COUNT(CASE WHEN launch.launch_status = 'Failure' 
             AND date.year >= 2001 
             AND (date.year < 2024 OR (date.year = 2024 AND date.month < 6) OR (date.year = 2024 AND date.month = 6 AND date.day <= 7)) THEN 1 END) AS '21st_failed'
-FROM launch JOIN date ON launch.date_id = date.date_id;```
+FROM launch JOIN date ON launch.date_id = date.date_id;
+```
 
 ![image](https://github.com/user-attachments/assets/c948d3b7-403d-433a-849d-ff69e2fedd68)
 
