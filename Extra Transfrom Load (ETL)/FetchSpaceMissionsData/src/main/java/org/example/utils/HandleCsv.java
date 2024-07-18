@@ -26,7 +26,6 @@ public class HandleCsv {
             String[] header = headerSet.toArray(new String[0]);
             writer.writeNext(header);
 
-            // Write data for each object in dataList
             for (T obj : dataList) {
                 Map<String, String> fieldMap = getObjectFields(obj);
                 String[] data = new String[header.length];
@@ -51,11 +50,9 @@ public class HandleCsv {
             field.setAccessible(true);
             Object value = field.get(obj);
             String fieldName = field.getName();
-            // check also the fields for the nested classes namely when method have called recursively
             if (isPrimitiveOrString(field.getType())) {
                 fieldMap.put(fieldName, value != null ? value.toString() : null);
             } else {
-                // extract nested objects and call method itself recursively
                 fieldMap.putAll(getObjectFields(value));
             }
         }
