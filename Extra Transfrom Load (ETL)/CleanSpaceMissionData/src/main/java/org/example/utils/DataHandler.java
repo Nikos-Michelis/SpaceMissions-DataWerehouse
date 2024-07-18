@@ -85,7 +85,6 @@ public class DataHandler {
     }
     public static List<CsvEntity> checkEntitiesInstance(List<CsvEntity> resultList) {
         int counter = 1;
-        //int counter = 5301;
         List<CsvEntity> entitiesList = new ArrayList<>();
         for (CsvEntity csvEntity : resultList) {
             if (csvEntity instanceof Launch launch) {
