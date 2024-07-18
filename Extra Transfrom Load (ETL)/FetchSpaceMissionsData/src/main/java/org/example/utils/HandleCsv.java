@@ -16,7 +16,6 @@ public class HandleCsv {
         }
 
         try (CSVWriter writer = new CSVWriter(new FileWriter(fileName))) {
-            // Generate headers from the structure of the Results class
             Set<String> headerSet = new LinkedHashSet<>();
             for (T obj : dataList) {
                 if (obj != null) {
