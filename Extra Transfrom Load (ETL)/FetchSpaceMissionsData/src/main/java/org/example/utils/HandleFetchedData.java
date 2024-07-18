@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 import static org.example.utils.HandleImages.downloadImages;
 
 public class HandleFetchedData {
-    private static String DATA_URL = "https://ll.thespacedevs.com/2.2.0/launch/?format=json&limit=100&mode=detailed&offset=5300";
+    private static String DATA_URL = "---url-here---";
     private static final String THROTTLE_URL = "https://ll.thespacedevs.com/2.2.0/api-throttle/?format=json";
     private static final String DOWNLOAD_ROCKET_DIR = Paths.get(System.getProperty("user.home"), "Desktop", "rocket_images").toString();
     private static final String DOWNLOAD_PADS_DIR = Paths.get(System.getProperty("user.home"), "Desktop", "pad_location_images").toString();
