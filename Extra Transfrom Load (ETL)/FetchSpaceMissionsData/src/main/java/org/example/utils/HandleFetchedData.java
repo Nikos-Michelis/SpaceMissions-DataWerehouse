@@ -45,7 +45,6 @@ public class HandleFetchedData {
                 JsonNode resultsNode = rootNode.get("results");
                 if (resultsNode != null && resultsNode.isArray()) {
                     try {
-                        //fetchImagesData(resultsNode);
                         for (JsonNode resultNode : resultsNode) {
                             Results result = objectMapper.treeToValue(resultNode, Results.class);
                             resultList.add(result);
