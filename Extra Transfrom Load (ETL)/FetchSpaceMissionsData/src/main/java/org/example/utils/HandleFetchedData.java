@@ -68,11 +68,9 @@ public class HandleFetchedData {
         HttpResponse<String> throttleResponse = clientGet(client, THROTTLE_URL);
         if (throttleResponse.statusCode() == 200) {
             JsonNode throttleData = objectMapper.readTree(throttleResponse.body());
-            // Extract throttle parameters
             int requestLimit = throttleData.get("your_request_limit").asInt();
             int currentUse = throttleData.get("current_use").asInt();
             int nextUseSeconds = throttleData.get("next_use_secs").asInt();
-            // Check throttle data before making each request
             if (currentUse >= requestLimit) {
                 if (nextUseSeconds > 0) {
                     System.out.println("throttleData: " + throttleData);
