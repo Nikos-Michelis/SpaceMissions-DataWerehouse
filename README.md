@@ -84,7 +84,7 @@ GROUP BY '20th_century', '21th_century';
   <img src="https://github.com/user-attachments/assets/7c2b006c-1b77-4b5d-8e58-e70bd252170b">
 </p>
 
-<h2>Return all Starlink missions in Low Earth Orbit along the other missions in this orbit.</h2>
+<h2>Retrieve all Starlink missions in Low Earth Orbit along the other missions in this orbit.</h2>
 
 ```sql
 SELECT
