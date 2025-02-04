@@ -10,7 +10,6 @@ CREATE TABLE `date` (
   PRIMARY KEY (date_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-/*DROP TABLE time;*/
 CREATE TABLE `time` (
   `time_id` INT NOT NULL,
   `hour` INT NOT NULL,
@@ -19,7 +18,6 @@ CREATE TABLE `time` (
   PRIMARY KEY (time_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-/*DROP TABLE rocket;*/
 CREATE TABLE `rocket` (
   `rocket_id` INT NOT NULL,
   `rocket_name` VARCHAR(45) NOT NULL,
@@ -47,16 +45,14 @@ CREATE TABLE `location` (
   PRIMARY KEY (location_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-/*DROP TABLE mission;*/
 CREATE TABLE `mission` (
   `mission_id` INT NOT NULL,
   `mission_name` VARCHAR(255) NOT NULL,
-  /*`mission_description` TEXT DEFAULT NULL,*/
+  `mission_description` TEXT DEFAULT NULL,
   `mission_type` TEXT DEFAULT NULL,
   PRIMARY KEY (mission_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-/*DROP TABLE orbit;*/
 CREATE TABLE `orbit` (
   `orbit_id` INT NOT NULL,
   `orbit_name` VARCHAR(45) NOT NULL,
@@ -64,13 +60,12 @@ CREATE TABLE `orbit` (
   PRIMARY KEY (orbit_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-/*DROP TABLE launch_provider;*/
 CREATE TABLE `launch_provider` (
   `provider_id` INT NOT NULL,
   `provider_name` VARCHAR(255) NOT NULL,
   `provider_type` VARCHAR(255) NOT NULL,
   `provider_country_code` TEXT NOT NULL,
-  /*`provider_description` TEXT DEFAULT NULL,*/
+  `provider_description` TEXT DEFAULT NULL,
   `provider_administrator` VARCHAR(45) DEFAULT NULL,
   `founding_year` INT DEFAULT NULL,
   `total_provider_launches` INT NOT NULL,
@@ -81,7 +76,6 @@ CREATE TABLE `launch_provider` (
   PRIMARY KEY (provider_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-/*DROP TABLE launch_pad;*/
 CREATE TABLE `launch_pad` (
   `launch_pad_id` INT NOT NULL,
   `launch_pad_name` VARCHAR(45) NOT NULL,
@@ -95,7 +89,6 @@ CREATE TABLE `launch_pad` (
   PRIMARY KEY (launch_pad_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-/*DROP TABLE launch;*/
 CREATE TABLE `launch` (
   `launch_id` INT NOT NULL,
   `provider_id` INT NOT NULL,
